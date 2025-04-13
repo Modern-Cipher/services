@@ -1,0 +1,84 @@
+/* TECHSTACK SECTION */
+.techstack {
+    grid-area: 6 / 1 / 7 / 12;
+    background-color: #000000;
+    padding: 60px 0;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  /* HEADINGS */
+  .techstack h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+  
+  /* WRAPPERS */
+  .tech-row-wrapper,
+  .tools-row-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+  }
+  
+  /* SCROLLING ROW */
+  .scroll-row,
+  .scroll-row.clone {
+    display: flex;
+    gap: 30px;
+    padding: 10px 0;
+    white-space: nowrap;
+    align-items: center;
+  }
+  
+  /* ICON + LABEL STYLE */
+  .tech-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    color: white;
+  }
+  
+  /* IMAGE / SVG ICON */
+  .tech-icon img,
+  .tech-icon svg {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  /* 🌞 LIGHT MODE OVERRIDES */
+  body.light .techstack {
+    background-color: #ffffff;
+    color: #222;
+  }
+  
+  body.light .techstack h1 {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  /* 🆕 Dark Gray Labels in Light Mode (instead of gradient) */
+  body.light .tech-icon span {
+    color: #444;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
+  
+
+  body,
+.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}

@@ -1,0 +1,79 @@
+/* TOOLS WRAPPER */
+.tools-row-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+  }
+  
+  /* SCROLLING ROW */
+  .tools-scroll {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    white-space: nowrap;
+    padding: 10px 20px; /* ✅ Added left/right padding */
+    align-items: center;
+  }
+  
+  /* ✅ Right margin after the last item to prevent edge clipping */
+  .tools-scroll .tech-icon:last-child {
+    margin-right: 10px;
+  }
+  
+  /* ICON + LABEL */
+  .tech-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    color: white;
+  }
+  
+  /* ICON IMAGE */
+  .tech-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  /* HEADING */
+  .techstack h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+  
+  /* 🌞 LIGHT MODE OVERRIDES */
+  body.light .techstack {
+    background-color: #ffffff;
+    color: #222;
+  }
+  
+  body.light .techstack h1 {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  /* 🆕 Tool Label: dark gray in light mode */
+  body.light .tools-row-wrapper .tech-icon span {
+    color: #444;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
+  
+  /* SMOOTH THEME TRANSITION */
+  body,
+  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  

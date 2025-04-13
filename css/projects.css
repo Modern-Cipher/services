@@ -1,0 +1,173 @@
+.projects {
+    grid-area: 5 / 1 / 6 / 13;
+    background-color: #000000;
+    padding: 60px 0;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  .projects h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  /* Scroll Wrapper */
+  .projects-scroll-wrapper {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .projects-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Project List Layout */
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 30px;
+  }
+  
+  /* Project Card - INVISIBLE */
+  .project-row-card {
+    display: flex;
+    gap: 15px;
+    width: 300px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none;
+  }
+  
+  /* Image Container */
+  .project-card-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+  }
+  
+  /* Inner Image Support (Optional) */
+  .project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  
+  /* Info */
+  .project-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    flex: 1;
+  }
+  
+  .project-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+  }
+  
+  .project-card-desc {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin: 2px 0;
+    flex-grow: 1;
+    color: white;
+  }
+  
+  .project-card-btn {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: filter 0.2s ease;
+  }
+  .project-card-btn:hover {
+    filter: brightness(1.1);
+  }
+  
+  /* Light Mode */
+  body.light .projects {
+    background-color: #ffffff;
+    color: #222;
+  }
+  
+  body.light .projects h1 {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  body.light .project-card-title {
+    color: #444;
+  }
+  
+  body.light .project-card-desc {
+    color: #555;
+  }
+  
+  /* Image container in light mode (still transparent) */
+  body.light .project-card-image {
+    background-color: transparent;
+  }
+  
+  /* Dot indicators for mobile */
+  @media (max-width: 699px) {
+    .projects-scroll-wrapper {
+      padding-left: 15px;
+    }
+  
+    .project-list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 15px;
+      scroll-snap-type: x mandatory;
+      width: max-content;
+    }
+  
+    .scroll-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 20px;
+    }
+  
+    .project-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #888;
+      transition: background-color 0.3s ease;
+    }
+  
+    .project-dot.active {
+      background-color: #00c6ff;
+    }
+  }
+  
+  /* Smooth Theme Transitions */
+  body,
+  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  

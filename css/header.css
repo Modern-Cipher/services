@@ -1,0 +1,164 @@
+.header {
+    grid-area: 2 / 1 / 3 / 12;
+    background: linear-gradient(to bottom, #000000, #1c1c1c);
+    color: white;
+    padding: 80px 30px;
+    overflow-x: hidden;
+  }
+  
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .header-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .header h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .header p {
+    max-width: 700px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: white;
+  }
+  
+  .button-wrapper {
+    text-align: left;
+  }
+  
+  .header button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+  }
+  
+  .header button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+  }
+  
+  .header-logo {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-logo img {
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* ✅ Responsive below 980px — minimize spacing */
+  @media (max-width: 980px) {
+    .header-inner {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px; /* 🔧 reduced gap between logo & text */
+    }
+  
+    .header-logo {
+      order: -1;
+      margin-bottom: 10px; /* 🔧 less margin between logo and text */
+    }
+  
+    .header-logo img {
+      max-width: 200px;
+    }
+  
+    .button-wrapper {
+      text-align: center;
+    }
+  
+    .header {
+      padding: 40px 20px; /* 🔧 reduced padding for smaller screen */
+    }
+  }
+  
+  /* ✅ Light Mode Override */
+  body.light .header {
+    background-color: white;
+    background-image: none;
+    color: #333;
+  }
+  
+  body.light .header h1 {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  body.light .header h4,
+  body.light .header p {
+    color: #444;
+  }
+  
+  body.light .header button {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+  }
+  
+  body.light .header button:hover {
+    filter: brightness(1.1);
+  }
+  
+
+  body,
+.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+#home {
+    scroll-margin-top: 80px; /* equal or greater than your sticky navbar height */
+  }
+  
+
+  /* ✅ Scroll offset so top padding is respected on mobile */
+@media (max-width: 699px) {
+    #home {
+      scroll-margin-top: 120px; /* adjust based on your header padding */
+    }
+  }
+  
+
+  a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+.logo-text {
+    text-decoration: none;
+  }
+  

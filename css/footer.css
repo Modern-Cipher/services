@@ -1,0 +1,29 @@
+.footer {
+    grid-area: 8 / 1 / 9 / 12;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95rem;
+    overflow-x: hidden;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  
+  /* 🌙 Light mode gradient text */
+  body.light .footer p {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  body,
+.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
