@@ -3,7 +3,7 @@ April 13, 2025
 
 Welcome to **Modern Cipher**, a personal freelance portfolio website designed to showcase a broad range of IT services and digital solutions for clients and businesses. This project highlights my professional skills in web development, graphic design, networking, automation, and more.
 
-![Modern Cipher Preview](assets/LOGO.png)
+![Modern Cipher Preview](assets/modern-cipher.png)
 
 ---
 
