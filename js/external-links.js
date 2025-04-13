@@ -4,15 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
   
     if (loginBtn) {
       loginBtn.addEventListener("click", function () {
-        window.open("", "_blank");
+        window.open("#home");
       });
     }
   
     if (signupBtn) {
       signupBtn.addEventListener("click", function () {
-        window.open("", "_blank");
+        window.open("#home");
       });
     }
   });
   
 //https://www.facebook.com/login
+//"", "_blank"
