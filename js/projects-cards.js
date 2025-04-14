@@ -3,50 +3,64 @@ document.addEventListener("DOMContentLoaded", () => {
   
     const projects = [
       {
-        id: "project1",
+        id: "sibol",
         image: "assets/projects/project1.png",
-        title: "Modern Cipher Logo",
-        desc: "Created on March 2025"
+        title: "SIBOL: Mobile Application",
+        desc: "Created on Jun 9, 2022"
       },
       {
-        id: "project2",
+        id: "pati",
         image: "assets/projects/project1.png",
-        title: "UI Redesign",
-        desc: "Created on April 2025"
+        title: "Christening <br/>Tarpaulin Design",
+        desc: "Created on Jun 4, 2023 pati"
       },
       {
-        id: "project3",
+        id: "nyjah",
+        image: "assets/projects/project1.png",
+        title: "Christening <br/>Tarpaulin Design",
+        desc: "Created Jun 9, 2023"
+      },
+      
+      {
+        id: "watch",
+        image: "assets/projects/project1.png",
+        title: "Watch Poster Design",
+        desc: "Created on Jun 9, 2023"
+      },
+      {
+        id: "project4",
         image: "assets/projects/project1.png",
         title: "CRM Dashboard",
         desc: "Created on May 2024"
       },
       {
-        id: "project4",
-        image: "assets/projects/project1.png",
-        title: "POS System",
-        desc: "Created on June 2024"
-      },
-      {
         id: "project5",
         image: "assets/projects/project1.png",
-        title: "Inventory Manager",
-        desc: "Created on July 2024"
+        title: "UI Redesign",
+        desc: "Created on April 2025"
       },
       {
         id: "project6",
         image: "assets/projects/project1.png",
-        title: "Mobile App Design",
-        desc: "Created on August 2024"
-      }
+        title: "Modern Cipher Logo",
+        desc: "Created on March 2025"
+      },
+      {
+        id: "project7",
+        image: "assets/projects/project1.png",
+        title: "OJT Management System",
+        desc: "Created on March 2025"
+      },
     ];
   
     const projectLinks = {
-      project1: "",
+      sibol: "",
       project2: "",
       project3: "",
       project4: "",
       project5: "",
-      project6: ""
+      project6: "",
+      project7: "",
     };
   
     projects.forEach(project => {

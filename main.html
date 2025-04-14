@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Cipher</title>
+    <link rel="icon" type="image/x-icon" href="assets/mdc.ico" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/parent.css" />
+    <link rel="stylesheet" href="css/topbar.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/features.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/techstack.css" />
+    <link rel="stylesheet" href="css/tools.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/mobile-icons.css" />
+    <link rel="stylesheet" href="css/modal_services.css" />
+    <!-- Bootstrap + FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  
+</head>
+  <body>
+    <div class="parent">
+      <!-- TOPBAR SECTION -->
+      <div
+        class="topbar div1 d-flex justify-content-between align-items-center px-4 py-2"
+      >
+      <div class="logo d-flex align-items-center gap-2" id="logo-wrapper">
+        <img id="main-logo" alt="Logo" class="logo-img" />
+        <span class="logo-text">Modern Cipher</span>
+      </div>
+      
+
+        <nav class="nav-links d-flex align-items-center gap-3">
+          <div class="nav-main d-flex gap-3">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#techstack">TechStack</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <!-- <button id="login-btn">Login</button>
+          <button id="signup-btn">Sign Up</button> -->
+          
+          <span id="theme-toggle"><i class="fas fa-sun"></i></span>
+        </nav>
+      </div>
+
+      <!-- HEADER SECTION -->
+      <div class="header div2" id="home">
+        <div class="header-inner">
+          <div class="header-text">
+            <h1>Modern Cipher</h1>
+            <h4>Decoding Your Tech Needs</h4>
+            <p>
+              Expert computer repair and network administration, creative graphic design solutions,
+              professional web and native Android development, and CCTV system installation.
+            </p>
+            <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })">
+              Get Started
+            </button>
+          </div>
+          <div class="header-logo">
+            <img id="header-logo" alt="Logo" />
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- FEATURES SECTION -->
+      <div class="features div3" id="features">
+        <div class="slider">
+          <div class="slide-track" id="feature-slide-track">
+            <!-- Slides will be injected via JS -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- SERVICES SECTION -->
+      <div class="services div4 text-center" id="services">
+        <h1>Services Offered</h1>
+        <small><strong style="font-style: italic; font-weight: 300;">Hello! Click this card to view more info thanks.</strong></small>
+      
+        <div class="services-scroll-wrapper">
+          <div class="services-list" id="services-list">
+            <!-- JS will insert service-boxes here -->
+          </div>
+        </div>
+      
+        <div class="services-indicators" id="services-indicators">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      
+      <!-- ✅ Modal (can be placed at bottom of body) -->
+      <div class="modal" id="service-modal">
+        <div class="modal-content">
+          <span class="close-btn" id="modal-close">&times;</span>
+          <h2 id="modal-title">Service Title</h2>
+          <ul id="modal-list"></ul>
+        </div>
+      </div>
+      
+      
+      
+
+      <!-- PROJECTS SECTION -->
+      <div class="projects div5" id="projects">
+        <h1>Projects</h1>
+      
+        <div class="projects-scroll-wrapper">
+          <div class="project-list" id="projects-list">
+            <!-- Project cards will be injected by JS -->
+          </div>
+        </div>
+      
+        <div class="scroll-indicators" id="projects-indicators">
+          <div class="project-dot active"></div>
+          <div class="project-dot"></div>
+          <div class="project-dot"></div>
+        </div>
+      </div>
+      
+
+      <!-- TECHSTACK SECTION -->
+      <div class="techstack div6" id="techstack">
+        <h1>TechStack</h1>
+        <div class="tech-row-wrapper">
+          <div class="scroll-row tech-scroll" id="tech-icons"></div>
+        </div>
+      
+        <br />
+        <h1>Development & <br />Design Tools</h1>
+        <div class="tools-row-wrapper">
+          <div class="scroll-row tools-scroll" id="tools-icons"></div>
+        </div>
+      </div>
+      
+
+      <!-- CONTACT SECTION -->
+      <div class="contact div7" id="contact">
+        <h1 class="contact-title">Get in Touch</h1>
+        <div class="contact-options" id="contact-options"></div>
+      </div>
+      
+      <!-- FOOTER SECTION -->
+      <div class="footer div8 text-center py-3">
+        <p>
+          All rights reserved © Modern Cipher <span id="footer-year"></span>
+        </p>
+      </div>
+    </div>
+
+    <!-- MOBILE FLOAT ICON GROUP -->
+<!-- Fixed Toggle Gear Icon -->
+<div class="gear-toggle" onclick="toggleGearMenu()">
+    <i class="fas fa-cog"></i>
+  </div>
+  
+  <!-- Popup Modal Menu -->
+  <div class="gear-modal" id="gearModal">
+    <a href="#home"><i class="fas fa-home"></i> Home</a>
+    <a href="#services"><i class="fas fa-briefcase"></i> Services</a>
+    <a href="#projects"><i class="fas fa-folder"></i> Projects</a>
+    <a href="#techstack"><i class="fas fa-layer-group"></i> TechStack</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+  
+      
+      
+
+    <!-- Theme Toggle Script -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/topbar.js"></script>
+    <script src="js/external-links.js"></script>
+    <script src="js/features-slides.js"></script>
+    <script src="js/services-cards.js"></script>
+    <script src="js/projects-cards.js"></script>
+    <script src="js/techstack.js"></script>
+    <script src="js/mobile-icons.js"></script>
+    <script src="js/services-dots.js" defer></script>
+    <script src="js/projects-indicator.js" defer></script>
+    <script src="js/techstack_scroll.js"></script>
+    <script src="js/tools_scroll.js"></script>
+    <script src="js/protect-images.js"></script>
+    <script src="js/protect-content.js"></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/footer-year.js" defer></script>
+    <script src="js/modal_services.js"></script>
+  </body>
+</html>

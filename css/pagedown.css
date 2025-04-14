@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #2c2c2c;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+header span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.message {
+  font-size: 1rem;
+  color: #6b6b6b;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.footer-message {
+  font-size: 0.9rem;
+  color: #9a9a9a;
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+/* 🔁 Responsive Adjustments */
+@media (max-width: 768px) {
+  .logo {
+    height: 45px;
+  }
+  header span {
+    font-size: 1.3rem;
+  }
+  main h1 {
+    font-size: 1.7rem;
+  }
+  .message {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 40px;
+  }
+  header span {
+    font-size: 1.1rem;
+  }
+  main h1 {
+    font-size: 1.5rem;
+  }
+  .message {
+    font-size: 0.85rem;
+  }
+  .footer-message {
+    font-size: 0.75rem;
+  }
+}
