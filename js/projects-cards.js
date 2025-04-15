@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const projects = [
     {
       id: "project16",
-      image: "assets/projects/project16.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczM_89ajzZXKKju2aWj1tXvl857c8tbujYfgVkIJKY6uidsqPDNUDrYP8BaVT9h-vJtgdfTQX9jyCphIm9YKI1AiEqJ5L9nY7IlB4gzWR6WJlc6lkshqBN8KmXQjBoZ4X1KoZgg9jrVvNIKANyXxPwsm=w945-h945-s-no-gm?authuser=0",
       title: "OJT Management System",
       desc: "Created on Mar 30, 2025"
     },
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: "project2",
-      image: "assets/projects/project2.png",
+      image: "",
       title: "VB. Net Desktop Application",
       desc: "Created on Mar 2, 2022"
     },

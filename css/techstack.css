@@ -82,3 +82,51 @@
 .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
+
+.tech-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  margin: 10px 20px;
+  color: white;
+}
+
+.tech-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.tech-icon:hover img {
+  width: 100px;
+  height: 100px;
+}
+
+.tech-icon.loading::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #00c6ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.tech-icon:not(.loading)::before {
+  display: none;
+}
+
+.tech-icon span {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  color: white;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

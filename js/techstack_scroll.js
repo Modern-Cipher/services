@@ -1,19 +1,28 @@
-function setupAutoScrollLeft(wrapperSelector, speed = 0.5) {
+function setupAutoScrollLeft(wrapperSelector, speed = 2) {
   const wrapper = document.querySelector(wrapperSelector);
   const row = wrapper.querySelector('.scroll-row');
 
-  // Clone the icons inside, not the row container itself
+  // Clone the items inside, not the row itself
   const items = Array.from(row.children);
-  for (let i = 0; i < 2; i++) {
-    items.forEach((item) => {
+  for (let i = 0; i < 10; i++) {
+    items.forEach(item => {
       row.appendChild(item.cloneNode(true));
     });
   }
 
   let scroll = 0;
-  function animate() {
-    scroll += speed;
-    if (scroll >= row.scrollWidth / 3) scroll = 0;
+  let lastTime = performance.now();
+
+  function animate(time) {
+    const delta = time - lastTime;
+    lastTime = time;
+
+    scroll += speed * (delta / 16.67); // Normalize to 60fps baseline
+
+    if (scroll >= row.scrollWidth / 3) {
+      scroll = 0;
+    }
+
     wrapper.scrollLeft = scroll;
     requestAnimationFrame(animate);
   }
@@ -22,5 +31,5 @@ function setupAutoScrollLeft(wrapperSelector, speed = 0.5) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  setupAutoScrollLeft('.tech-row-wrapper', 0.6);
+  setupAutoScrollLeft('.tech-row-wrapper', 1); // Adjust speed here
 });

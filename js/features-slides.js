@@ -22,28 +22,41 @@ document.addEventListener("DOMContentLoaded", function () {
   
     slides.forEach((item) => {
       const slide = document.createElement("div");
-      slide.classList.add("slide");
+      slide.classList.add("slide", "loading");
   
-      slide.innerHTML = `
-        <img src="${item.img}" alt="${item.label}" />
-        <span class="slide-label">${item.label}</span>
-      `;
+      const img = new Image();
+      img.src = item.img;
+      img.alt = item.label;
   
+      const label = document.createElement("span");
+      label.className = "slide-label";
+      label.textContent = item.label;
+  
+      img.onload = () => {
+        slide.classList.remove("loading");
+        slide.classList.add("loaded");
+        img.classList.add("loaded");
+      };
+  
+      img.onerror = () => {
+        img.style.display = "none";
+        slide.classList.remove("loading");
+      };
+  
+      slide.appendChild(img);
+      slide.appendChild(label);
       slideTrack.appendChild(slide);
     });
   });
   
-
-
   document.addEventListener("DOMContentLoaded", () => {
     const slideTrack = document.querySelector(".slide-track");
   
     if (!slideTrack) return;
   
-    const slides = Array.from(slideTrack.children); // Original slides
+    const slides = Array.from(slideTrack.children);
   
-    // ✅ Clone all slides 4x for longer seamless scroll
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
       slides.forEach(slide => {
         const clone = slide.cloneNode(true);
         slideTrack.appendChild(clone);
