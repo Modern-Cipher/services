@@ -10,79 +10,80 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: "project15",
-      image: "assets/projects/project15.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczPFhqhjqYx1JKW60iupGzytGjQjv9lXcq8xkU7supp-wEBwoCjI26RrUH9Nh4cLS3xwhT9NCe053RmDEapdKNuwz1-HqhssTCh_EE8ya3stnFB1G0QokruhI6fB9RC9gWE5LfUEl6EfBmSILEaxifQ=w200-h200-s-no-gm?authuser=0",
       title: "Modern Cipher Logo",
       desc: "Created on Mar 15, 2025"
     },
     {
       id: "project14",
-      image: "assets/projects/project14.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczNq42hIpZOYA3P9X2SjmpQm8OpzfraLya4khVDFj1IPh4S95oDwlYOwQOGSRFbqG0tXAZ6HS9E2_pbq26NlGCodkPYU-dTJENjbGyz72y96xQ0yqvqJQrJtVuvFrlTQV6_S0pK7zkiy44pybC_ZhJU=w945-h945-s-no-gm?authuser=0",
       title: "Clinic Logo",
       desc: "Created on Mar 11, 2025"
     },
+    
     {
       id: "project13",
-      image: "assets/projects/project13.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczMLjHs9gpEp1uN9laABdvY1KEVIYPVILY4q_7BAod7C0MgmUb2g9H_jxk7RV7qnDfnRG9Gh2NrTiWnauuJtnbZjDI5U0BEIw2hRZnjpmwWpDaHE_MaVuwjr0_8EAv4Y9sU6NLeI-b_oSHTnE8Jdhl4=w1243-h698-s-no-gm?authuser=0",
       title: "Poster Design",
       desc: "Created on May 14, 2024"
     },
     {
       id: "project12",
-      image: "assets/projects/project12.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczN8rQZPfrFigyInjpXU6bdzHZ-cBNiwEx00GJHNh4ah7aBaZo4le0puHDd7dk_rA_Rx0_dtLru_1Vlg4P9ILirxLuJxJEjkkv4BKJj3KS8ayc52QlZCUGYko7OEdCumVzpwdTXQiNe0-Miv6JNmsEE=w544-h839-s-no-gm?authuser=0",
       title: "Cover Design",
       desc: "Created on Aug 15, 2024"
     },
     {
       id: "project11",
-      image: "assets/projects/project11.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczN5_pPDcwbmCuFywY7RGdi50ElT_WUQ-966aVi6-zGt9dqRSMrbwtkjtxgw2heKZFyz7pI0KK1jGR1lw7A4Ehi4nWbXv5zY6vNzK0zsFNr7ywXIDIG5YRxlH5OV2FyU9AxxqbxggnoeDPOJwwO2Yuc=w1227-h814-s-no-gm?authuser=0",
       title: "Christening <br/>Tarpaulin Design",
       desc: "Created Jun 9, 2023"
     },
     {
       id: "project10",
-      image: "assets/projects/project10.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczNFttLeFmfLltEWRl9Wg3zSNPI8KVdMGCwmXHINTrVUypyvzxNEk3wnQGqb7zxqq2R8byA7Y95xb6Q-mFQgn3rx6hPopI22i8-YIjLfB273EJ0cKjXOlEmGGDM0xtdPr6gWyqF6f5NeYH_ZF3krRAY=w945-h945-s-no-gm?authuser=0",
       title: "Watch Poster Design",
       desc: "Created on Jun 9, 2023"
     },
     {
       id: "project9",
-      image: "assets/projects/project9.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczPADyB12KmcdnrZNdje7x0ME1F61rHKJvDwmpZpMI8BDKDbZk--IRvXxLnWrJWic-III6fyaayCYhPAIs-a23S4znuSfv01SyJZEHlShqlFc_P6-M1bw1wG6Vx2srEnRWXGITwXZhM0qssS8D4pGSc=w1220-h809-s-no-gm?authuser=0",
       title: "Christening <br/>Tarpaulin Design",
       desc: "Created on Jun 4, 2023"
     },
     {
       id: "project8",
-      image: "assets/projects/project8.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczNsGwYpwmfSygWxdEfGRWAxl3QBB_w1fdwX0kQonWMNurB-gYrcGi4HL6LNGzRfBvUTSqWE8KbGtqcmNY-WYRcA65jvnkZE8KaD3SUCDuob1YrGW_dXv_IrJQnWn6sgEu3Fi-xQZfqiS9HI0lEhJ8o=w1560-h711-s-no-gm?authuser=0",
       title: "Landing page using Google Sites",
       desc: "Created on Nov 10, 2022"
     },
     {
       id: "project7",
-      image: "assets/projects/project7.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczP09gwe_1TjzeW234YAeaz7i3cpM-P1c1amEgcPX0OsFXcDTNOYf8_HxZQyhQqwqdvkHGlchQYWbDctlwgoMU-U4NDq61yhgxag-mcyLyWisYuDWNVDhhDTlbAA68ZP6YJ2YqUgjro_aWr9G3JUZZU=w200-h200-s-no-gm?authuser=0",
       title: "SIBOL: Mobile Application",
       desc: "Created on Jun 9, 2022"
     },
     {
       id: "project6",
-      image: "assets/projects/project6.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczN3WybX0KrRbcYd5iwWhd7zF-HYv95DBPH23CLogLj4YpSA4jaVWSQvwlvbc91txSAlUm61E6y3r3aIn-NNfSMxQN1-oURRF9h5IumXYflTZHeDbSQs_FtGNJeEpB7kivoJapmguA0Pd8OHOhO6ahY=w1225-h815-s-no-gm?authuser=0",
       title: "E-loading Tarpaulin Design",
       desc: "Created on May 9, 2022"
     },
     {
       id: "project5",
-      image: "assets/projects/project5.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczP8dmc8rFB1vi7VUt1hmmpt2-p8YLx_n5GKLgBtG8w6FigqCjeMs8Z2fJUdJ-mAaHTbarpODVwuQPJOUI2IBlP1Su5z67hLUuQ5NZflDLoDXK-HWaJ3_NZIs_jIvXoiGQCYP50UN5yHBASnHmERU-o=w945-h945-s-no-gm?authuser=0",
       title: "Bulacan Blood Bank Logo & Mobile App",
       desc: "Created on Apr 21, 2022"
     },
     {
       id: "project4",
-      image: "assets/projects/project4.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczPCYl36_AT4b_H95H9xvRlnAghAkUZ5n9i4Q8Aumzxae_JCsmJEQPoNdr3JL7XiB-P67GLzZe88461rFYHD13OOZLSY5AYPwWMaeJ5Kk6ZjbGwzSlwp7t5NQ9s8MaKifvRhT3xRCeheGS6VpG_kaf8=w794-h769-s-no-gm?authuser=0",
       title: "Birthday Cake Topper Design",
       desc: "Created on Dec 5, 2024"
     },
     {
       id: "project3",
-      image: "assets/projects/project3.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczNdkZD35StSOJ37GCpOTLMNJG1lmBaiEYxk_XBmk5_9ghyILuFtShQawHXyq0Rl2e7J3jPmi67jNOjRoNwnJKY1Xc6-gxmr24Em8qorwE96NRfWmaQngKCLrK8GDYpZWSnUUsN9kgdoL96wAA7HF08=w1173-h779-s-no-gm?authuser=0",
       title: "Birthday Tarp Design",
       desc: "Created on Mar 21, 2022"
     },
@@ -94,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: "project1",
-      image: "assets/projects/project1.png",
+      image: "https://lh3.googleusercontent.com/pw/AP1GczNJYMdOdkWXdhmTVlFsd53_xj1aSUjqO18yRXFcx6JdDoUr7-Nqia4HYv_wsmduxClfUz8VMWhXBySnxBMJR_FVrjsZTqXnmkdM_WmGyU7Fr99kof5a3XyepRoZymygu_6bEYexTCb4EOM90VnDcAg=w1058-h815-s-no-gm?authuser=0",
       title: "Automated E-Certificate Design",
       desc: "Created on Ma 26, 2021"
     }
