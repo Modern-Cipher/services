@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "project16",
       image: "assets/projects/project16.png",
       title: "OJT Management System",
-      desc: "Created on March 30, 2025"
+      desc: "Created on Mar 30, 2025"
     },
     {
       id: "project15",
       image: "assets/projects/project15.png",
       title: "Modern Cipher Logo",
-      desc: "Created on March 15, 2025"
+      desc: "Created on Mar 15, 2025"
     },
     {
       id: "project14",
