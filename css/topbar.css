@@ -1,116 +1,138 @@
 .topbar {
-    grid-area: 1 / 1 / 2 / 13;
-    background-color: #000000;
-    padding: 12px 30px;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  grid-area: 1 / 1 / 2 / 13;
+  background-color: #000000;
+  padding: 12px 20px; /* ⬅️ reduce for ultra-small screens */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px; /* ✅ lock height for sticky */
+  overflow: hidden; /* ✅ prevent overflows */
+}
+
+/* LOGO IMAGE */
+.logo-img {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+}
+
+/* LOGO TEXT */
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* NAVIGATION */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap; /* ✅ keep in one row */
+  overflow: hidden;
+}
+
+/* NAV LINKS */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON */
+.nav-links button {
+  margin-left: 1px;
+  padding: 6px 10px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+}
+
+.nav-links button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* TOGGLE ICON */
+#theme-toggle i {
+  font-size: 1.2rem;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* ICON COLOR SWITCH */
+body:not(.light) #theme-toggle i.fas.fa-sun {
+  color: white;
+}
+
+body.light #theme-toggle i.fas.fa-moon {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* LIGHT MODE COLORS */
+body.light .logo-text,
+body.light .nav-links a {
+  color: #007bff;
+}
+
+body.light .nav-links a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 980px) {
+  .nav-links .nav-main {
+    display: none !important;
   }
-  
-  .logo-img {
-    height: 36px;
-    width: 36px;
-    object-fit: contain;
-  }
-  
+}
+
+@media (max-width: 580px) {
   .logo-text {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: white;
+    display: none !important;
   }
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+}
+
+@media (max-width: 320px) {
+  .topbar {
+    padding: 10px 12px; /* more compact on ultra-small */
   }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ✅ Gradient Button */
-  .nav-links button {
-    margin-left: 1px;
-    padding: 6px 10px;
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-weight: 500;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
-  }
-  
-  .nav-links button:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-  }
-  
-  /* ✅ Theme Toggle Icon */
+
   #theme-toggle i {
-    font-size: 1.2rem;
-    margin-left: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
+    margin-left: 8px;
   }
-  
-  /* 🌞 Sun = white (Dark mode) */
-  body:not(.light) #theme-toggle i.fas.fa-sun {
-    color: white;
-  }
-  
-  /* 🌙 Moon = gradient (Light mode) */
-  body.light #theme-toggle i.fas.fa-moon {
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
-  
-  /* ✅ Accent Blue (Light mode) */
-  body.light .logo-text,
-  body.light .nav-links a {
-    color: #007bff;
-  }
-  
-  body.light .nav-links a:hover {
-    text-decoration: underline;
-    color: #0056b3;
-  }
-  
-  /* ✅ Hide nav links on mobile */
-  @media (max-width: 980px) {
-    .nav-links .nav-main {
-      display: none !important;
-    }
-  }
-  
-  /* ✅ Hide logo text on very small screen */
-  @media (max-width: 580px) {
-    .logo-text {
-      display: none !important;
-    }
-  }
-  
 
+  .nav-links {
+    gap: 6px;
+  }
 
-  body,
-.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  .nav-links button {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
 }

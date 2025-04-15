@@ -16,14 +16,21 @@ html, body {
   background-color: #000000;
   color: white;
   scroll-behavior: smooth;
-  overflow-x: hidden; /* ✅ Retained here only */
+  overflow-x: hidden;
 }
+
+/* ✅ PREVENT LIGHT MODE FLASH ON REFRESH */
+html.light,
+body.light {
+  background-color: #ffffff !important;
+  color: black !important;
+}
+
 /* Fade transition for background and color */
 body,
 .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
-
 
 /* WRAPPER FOR CENTERED MAX WIDTH */
 .container-outer {
@@ -41,16 +48,13 @@ body,
   grid-column-gap: 0;
   grid-row-gap: 0;
   min-height: 100vh;
-
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-
-  /* ❌ Removed overflow-x: hidden here to allow horizontal scroll in children */
 }
 
 /* GRID AREA ASSIGNMENT */
-.div1 { grid-area: 1 / 1 / 2 / 13; }
+.div1 { grid-area: 1 / 1 / 2 / 13; position: sticky; top: 0; z-index: 999; }
 .div2 { grid-area: 2 / 1 / 3 / 13; }
 .div3 { grid-area: 3 / 1 / 4 / 13; }
 .div4 { grid-area: 4 / 1 / 5 / 13; }
@@ -73,11 +77,6 @@ body,
 }
 
 /* LIGHT MODE OVERRIDE */
-body.light {
-  background-color: white;
-  color: black;
-}
-
 body.light .div1,
 body.light .div2,
 body.light .div3,
@@ -110,5 +109,10 @@ body, .no-select {
   .body {
     display: block;
   }
-}
 
+  .div1 {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+}
