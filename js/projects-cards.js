@@ -102,9 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const projectLinks = {
-    project16: "https://github.com/Modern-Cipher/ojt-management.git",
+    project16: "",  //https://github.com/Modern-Cipher/ojt-management.git
     project15: "https://modern-cipher.github.io/services/",
-    project14: "https://drive.google.com/file/d/11eFPtCRlAUeUSNEp8-_BXfCivQYRwPT9/view",
+    project14: "",  //https://drive.google.com/file/d/11eFPtCRlAUeUSNEp8-_BXfCivQYRwPT9/view
     project13: "https://docs.google.com/presentation/d/1Msdz8nfx8pTal2UkCkvGjquK3wGsF8yUjkfZj--eD9Y/edit?usp=sharing",
     project12: "",
     project11: "https://drive.google.com/file/d/1ZC-gI49zs8EPEhiaD1QUnkKYcJZR08G5/view",
