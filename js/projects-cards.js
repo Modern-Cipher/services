@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       desc: "Created on Ma 26, 2021"
     }
   ];
-
+  const defaultLink = "https://www.facebook.com/profile.php?id=61575231713325";
   const projectLinks = {
     project16: "",  //https://github.com/Modern-Cipher/ojt-management.git
     project15: "https://modern-cipher.github.io/services/",
@@ -123,53 +123,56 @@ document.addEventListener("DOMContentLoaded", () => {
   projects.forEach(project => {
     const card = document.createElement("div");
     card.className = "project-row-card";
-    const link = projectLinks[project.id];
-    const disabled = !link ? 'disabled style="opacity:0.5" title="Link not available"' : "";
-
+  
+    const link = projectLinks[project.id] || defaultLink;
+    const isRequest = !projectLinks[project.id];
+  
+    // Build base HTML first
     card.innerHTML = `
-      <div class="project-card-image loading">
-        <img src="${project.image}" alt="${project.title}">
-      </div>
+      <div class="project-card-image loading"></div>
       <div class="project-card-info">
         <h3 class="project-card-title">${project.title}</h3>
         <p class="project-card-desc">${project.desc}</p>
-        <button class="project-card-btn" data-project="${project.id}" ${disabled}>View</button>
+        <button class="project-card-btn" data-project="${project.id}">${isRequest ? 'Request' : 'View'}</button>
       </div>
     `;
-
-    const img = card.querySelector("img");
+  
     const imgContainer = card.querySelector(".project-card-image");
-
-    // Show image and remove spinner on load
-    img.addEventListener("load", () => {
-      img.classList.add("loaded");
-      imgContainer.classList.remove("loading");
-    });
-
-    // Handle cached images (instantly apply loaded)
-    if (img.complete && img.naturalWidth !== 0) {
-      img.classList.add("loaded");
-      imgContainer.classList.remove("loading");
+  
+    // ✅ If no image, add outline & label
+    if (!project.image) {
+      imgContainer.classList.remove("loading"); // remove spinner
+      imgContainer.classList.add("no-image-outline");
+      imgContainer.innerHTML = `<span class="no-image-text">No Image</span>`;
+    } else {
+      const img = new Image();
+      img.src = project.image;
+      img.alt = project.title;
+  
+      img.onload = () => {
+        img.classList.add("loaded");
+        imgContainer.classList.remove("loading");
+      };
+  
+      img.onerror = () => {
+        imgContainer.classList.remove("loading");
+        imgContainer.classList.add("no-image-outline");
+        imgContainer.innerHTML = `<span class="no-image-text">No Image</span>`;
+      };
+  
+      imgContainer.appendChild(img);
     }
-
-    // Hide the image container completely if image fails
-    img.addEventListener("error", () => {
-      imgContainer.classList.remove("loading");
-      imgContainer.classList.add("hidden"); // this will apply display: none
-    });
-
+  
     projectList.appendChild(card);
   });
+  
 
-  // Handle "View" button click
   document.querySelectorAll(".project-card-btn").forEach(button => {
     const projectId = button.getAttribute("data-project");
-    const link = projectLinks[projectId];
+    const link = projectLinks[projectId] || "https://www.facebook.com/profile.php?id=61575231713325";
 
-    if (link) {
-      button.addEventListener("click", () => {
-        window.open(link, "_blank");
-      });
-    }
+    button.addEventListener("click", () => {
+      window.open(link, "_blank");
+    });
   });
 });

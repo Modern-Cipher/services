@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
       { img: "https://lh3.googleusercontent.com/pw/AP1GczOshZHtkTCeg0XrBgM98T31PB7oicfQtvPM7pwZt_upadl0RuPAJGVag4Oy8MW6HaLKijK7Uo5-PS3XXTbyl-DfII6fiByQz9RYarEqkjzcKFgcKupDTYtU40BvJVDo8OIO9ys2y-PUXW9a5pVgAXVN=w740-h740-s-no-gm?authuser=0", label: "Server Configuration" },
       { img: "https://lh3.googleusercontent.com/pw/AP1GczNn2176ZmMuCcwD1tFhbGFm6ySLWTCmHgeubKquCMhs_wDLZBgQ4GftX-ZFEnrbAn73yAzRqLR2QYymTTI5SGTBdr9vDAYI2ACAyfvAU0UPQ1x9jgO7jrVbbpGG6iiyMTVCWAXDgu5TW8VnSwwfie-v=w740-h740-s-no-gm?authuser=0", label: "CCTV Setup" },
       { img: "https://lh3.googleusercontent.com/pw/AP1GczNlTwRJN3XXg3kucMwR5jajzOI5Z1KWps25R6_i82u69ZwOL60QRHlH0-cZdepyp4ZK0JYGFK8JQma4m3JZLbwcB3kknOer3RRTE9LANbp0RPfb40ZGZrHuX1V9jMhkUUay4Vnc4Bit771t6RVugJXB=w740-h740-s-no-gm?authuser=0", label: "CCTV Installation" },
+      // { img: "https://www.pngmart.com/files/7/SSD-PNG-Transparent-Image.png", label: "Solid State Drive (SSD)" },
+      // { img: "https://banner2.cleanpng.com/20180811/lsf/7db8ed39a36404fa5a07ec541a336177.webp", label: "NVME SSD" },
+      // { img: "", label: "" },
     ];
   
     function createSlide(item) {
