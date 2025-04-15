@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { img: "https://lh3.googleusercontent.com/pw/AP1GczNlTwRJN3XXg3kucMwR5jajzOI5Z1KWps25R6_i82u69ZwOL60QRHlH0-cZdepyp4ZK0JYGFK8JQma4m3JZLbwcB3kknOer3RRTE9LANbp0RPfb40ZGZrHuX1V9jMhkUUay4Vnc4Bit771t6RVugJXB=w740-h740-s-no-gm?authuser=0", label: "CCTV Installation" },
     ];
   
-    slides.forEach((item) => {
+    function createSlide(item) {
       const slide = document.createElement("div");
       slide.classList.add("slide", "loading");
   
@@ -32,33 +32,46 @@ document.addEventListener("DOMContentLoaded", function () {
       label.className = "slide-label";
       label.textContent = item.label;
   
-      img.onload = () => {
+      const shimmer = document.createElement("div");
+      shimmer.className = "shimmer-bar";
+      slide.appendChild(shimmer);
+  
+      const showImage = () => {
         slide.classList.remove("loading");
         slide.classList.add("loaded");
         img.classList.add("loaded");
+        shimmer.remove();
       };
   
-      img.onerror = () => {
-        img.style.display = "none";
-        slide.classList.remove("loading");
-      };
+      if (img.complete && img.naturalWidth !== 0) {
+        showImage();
+      } else {
+        img.onload = showImage;
+        img.onerror = () => {
+          img.style.display = "none";
+          slide.classList.remove("loading");
+          shimmer.remove();
+        };
+      }
   
       slide.appendChild(img);
       slide.appendChild(label);
+      return slide;
+    }
+  
+    slides.forEach(item => {
+      const slide = createSlide(item);
       slideTrack.appendChild(slide);
     });
-  });
   
-  document.addEventListener("DOMContentLoaded", () => {
-    const slideTrack = document.querySelector(".slide-track");
-  
-    if (!slideTrack) return;
-  
-    const slides = Array.from(slideTrack.children);
-  
+    const baseSlides = Array.from(slideTrack.children);
     for (let i = 0; i < 6; i++) {
-      slides.forEach(slide => {
-        const clone = slide.cloneNode(true);
+      baseSlides.forEach(original => {
+        const clone = original.cloneNode(true);
+        clone.classList.remove("loading");
+        clone.classList.add("loaded");
+        clone.querySelector(".shimmer-bar")?.remove();
+        clone.querySelector("img")?.classList.add("loaded");
         slideTrack.appendChild(clone);
       });
     }
