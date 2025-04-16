@@ -1,3 +1,3 @@
 // redirect.js
-window.location.href = "main.html";
-// window.location.href = "maintenance.html";
+window.location.href = "./views/main";
+// window.location.href = "./views/maintenance";
