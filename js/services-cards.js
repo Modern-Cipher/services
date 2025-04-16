@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const services = [
     {
-      title: "Computer | Laptop",
+      title: "PC & Laptop",
       image: "https://lh3.googleusercontent.com/pw/AP1GczP9cS0IkZkRQ6ELyly685O5-EUzrtuKa4GKX-iaBbNUfh9w9Ai-EhcqJQDPrTpWGfnPnjkOVX_GYke2z485ADxpw0pas_FIK7MA0X83F1e9al9uVazpelKviIJdmkQVN5padp6rlaNUJK34ylehvhE=w740-h740-s-no-gm?authuser=0",
       service: "computer"
     },
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       service: "webdev"
     },
     {
-      title: "Mobile App",
+      title: "Mobile Dev",
       image: "https://lh3.googleusercontent.com/pw/AP1GczOPb2h5DTUA6wojpKoyPW9_5geKV_xjDU1_oKbrKiRjHdqfG5hBsAGtQTJ6nidNSytPP7fjobDVrFEgvblF2zIffoRzLQ24s12QWoilpSztjYfE-22Gfq8gnRBsCCnfhGyYAqe8JCAU-UpV9KD8TO_C=w996-h664-s-no-gm?authuser=0",
       service: "appdev"
     },
@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
       service: "network"
     },
     {
-      title: "CCTV Setup",
+      title: "CCTV Camera",
       image: "https://lh3.googleusercontent.com/pw/AP1GczNRJURd9YY5ZaZF_Rxk-HVi8s9IqeyU3368s1foHLPmQCsx02ojmBjHcbqDRl_USKXY9EywNKlUZW9wpJL8l8pZ4Cjhp4XPebE_dUb61FfrtpLNsc_oK6EIwsP93vjWD5qjjzOxyixRSJqHdj1akBHd=w740-h605-s-no-gm?authuser=0",
       service: "cctv"
     },
     {
-      title: "Automation",
+      title: "Google Automation",
       image: "https://lh3.googleusercontent.com/pw/AP1GczPK0E5E16L59SRY4Q0iRk5VqvexgMAVmYrRM9CitPUb4HQzrLNE6Oacwlg4VlBd2DxVxEuXnmqW8v_lHJm4YJf7u3Z8tzoM8pjmzYUGnK4qtm_IyErWK14yZQeck5LLt2NqrBQ9VHTWKo_WU59I1xwA=w740-h740-s-no-gm?authuser=0",
       service: "automation"
     }

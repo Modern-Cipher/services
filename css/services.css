@@ -219,3 +219,29 @@ body,
 }
 
 
+.services-info-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: #ccc;
+  margin-top: -6px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.services-info-note i {
+  font-size: 0.75rem;
+  color: #888;
+  flex-shrink: 0;
+}
+
+body.light .services-info-note {
+  color: #444;
+}
+
+body.light .services-info-note i {
+  color: #666;
+}

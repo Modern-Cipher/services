@@ -1,96 +1,164 @@
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal.show {
-    display: flex;
-  }
-  
-  /* 🟣 MODAL CONTENT BASE */
-  .modal-content {
-    padding: 30px;
-    border-radius: 12px;
-    max-width: 400px;
-    width: 90%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    position: relative;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: #1a1a1a !important;  /* Dark background */
-    color: white !important;
-  }
-  
-  /* 🌞 LIGHT MODE OVERRIDE */
-  body.light .modal-content {
-    background-color: #ffffff !important;
-    color: #222 !important;
-  }
-  
-  /* TITLE */
-  .modal-content h2 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* LIST */
-  .modal-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .modal-content li {
-    margin: 10px 0;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    border-radius: 6px;
-    padding: 8px 12px;
-  }
-  
-  /* 💠 Hover Highlight */
-  .modal-content li:hover {
-    background-color: rgba(0, 198, 255, 0.15);
-    transform: scale(1.02);
-  }
-  
-  /* ICON */
-  .modal-content i {
-    color: #00c6ff;
-  }
-  
-  /* ❌ CLOSE BUTTON */
-  .close-btn {
-    position: absolute;
-    top: 12px;
-    right: 15px;
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .close-btn:hover {
-    color: #00c6ff;
-  }
-  
-  body.light .close-btn {
-    color: #333;
-  }
-  
-  body.light .close-btn:hover {
-    color: #0072ff;
-  }
-  
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #1a1a1a !important;
+  color: white !important;
+  padding: 25px 20px 15px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+}
+
+body.light .modal-content {
+  background-color: #ffffff !important;
+  color: #222 !important;
+}
+
+/* ⛔ CLOSE BUTTON FIXED TOP RIGHT */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #00c6ff;
+}
+
+body.light .close-btn {
+  color: #333;
+}
+
+body.light .close-btn:hover {
+  color: #0072ff;
+}
+
+/* 📌 HEADER BLOCK */
+.modal-header {
+  /* margin-top: 10px; */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal-header-row {
+  text-align: center;
+}
+
+.modal-header-row h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 📌 SERVICE NOTE BELOW TITLE */
+.service-note-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 4px;
+  margin: -4px -12px 10px;
+}
+
+/* WRAPPER: ICON LEFT, TEXT RIGHT */
+.service-note {
+  margin-top: 10px;
+  display: flex;
+  align-items: center; /* ✅ vertically center both icon and text */
+  gap: 10px;
+  font-size: 0.65rem;
+  color: #ccc;
+  text-align: left;
+  max-width: 500px;
+}
+
+/* ICON: FIXED SIZE, CENTERED */
+.service-note i {
+  width: 20px;
+  height: 20px;
+  font-size: 20px; /* Icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #aaa;
+}
+
+/* TEXT: FILL REMAINING SPACE */
+.service-note span {
+  flex: 1;
+  line-height: 1.3;
+  display: block;
+}
+
+body.light .service-note {
+  color: #444;
+}
+
+body.light .service-note i {
+  color: #888;
+}
+
+
+
+/* 🔽 SCROLLABLE LIST */
+.modal-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+  margin-top: 10px;
+}
+
+.modal-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-list li {
+  margin: 10px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.modal-list li:hover {
+  background-color: rgba(0, 198, 255, 0.15);
+  transform: scale(1.02);
+}
+
+.modal-list i {
+  color: #00c6ff;
+}
