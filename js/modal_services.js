@@ -147,46 +147,39 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // Add click events to all .service-box
+ 
   document.querySelectorAll(".service-box").forEach(box => {
     box.addEventListener("click", () => {
       const title = box.querySelector(".card-title").textContent.trim();
-
-      // Set modal title
       modalTitle.textContent = title;
-
-      // Clear previous modal content
       modalList.innerHTML = "";
       modalSubnote.innerHTML = "";
 
-      // Get items
       const items = [...(serviceData[title] || ["No info available"])];
-
-      // If first item is a service-note, add it below the title
       if (items.length && items[0].includes("service-note")) {
         const wrapper = document.createElement("div");
         wrapper.innerHTML = items[0];
         modalSubnote.appendChild(wrapper.firstElementChild);
-        items.shift(); // remove the note from the list
+        items.shift();
       }
 
-      // Populate the remaining service items
       items.forEach(item => {
         const li = document.createElement("li");
         li.textContent = item;
+        li.addEventListener("click", () => {
+          window.open("https://www.facebook.com/profile.php?id=61575231713325", "_blank");
+        });
         modalList.appendChild(li);
       });
 
-      // Show modal
       modal.classList.add("show");
     });
   });
 
-  // Close modal
   modalClose.addEventListener("click", () => {
     modal.classList.remove("show");
   });
 
-  // Close modal when clicking outside
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.classList.remove("show");
